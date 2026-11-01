@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#48668C">
+<title>The Miracle Project Supporters</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Be part of the miracle | The Miracle Project">
+<meta property="og:description" content="We passed 1,000,000 views in 58 days. Join our first 100 founding supporters and help us reach the next million.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="description" content="Become a monthly supporter of The Miracle Project podcast.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap">
+<style>
+html{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+/* Layout: mobile-first. Logo-blue hero with the give card inside the first screen, then one reading column telling the episode's story; a sticky give bar follows on phones. */
+:root{
+  --brand:#48668C;        /* sampled from the logo */
+  --brand-deep:#344E70;
+  --navy:#1F3350;
+  --sky:#C8D9EF;          /* pale blue for accents on the brand band */
+  --on-brand:#FFFFFF;
+  --bg:#F5F7FA;
+  --surface:#FFFFFF;
+  --fg:#18222F;
+  --muted:#5A6878;
+  --line:#DCE3EC;
+  --accent-text:#2F4B72;
+  --tier-bg:#EEF2F8;
+  --bar-end:#1F3350;
+  --focus:#7FA6D9;
+  --shadow:0 18px 50px -20px rgba(20,35,60,.45);
+  --f-display:"Barlow Condensed","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Barlow","Helvetica Neue",Arial,sans-serif;
+  --f-quote:"Newsreader",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --brand:#48668C;--brand-deep:#3A5679;--navy:#0E1828;--sky:#C8D9EF;--on-brand:#FFFFFF;
+  --bg:#10161F;--surface:#18212D;--fg:#E7ECF3;--muted:#9FAEC0;--line:#2A3646;
+  --accent-text:#9DBBE0;--tier-bg:#212C3A;--bar-end:#9DBBE0;--focus:#9DBBE0;--shadow:0 18px 50px -20px rgba(0,0,0,.7);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --brand:#48668C;--brand-deep:#3A5679;--navy:#0E1828;--sky:#C8D9EF;--on-brand:#FFFFFF;
+  --bg:#10161F;--surface:#18212D;--fg:#E7ECF3;--muted:#9FAEC0;--line:#2A3646;
+  --accent-text:#9DBBE0;--tier-bg:#212C3A;--bar-end:#9DBBE0;--focus:#9DBBE0;--shadow:0 18px 50px -20px rgba(0,0,0,.7);color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--brand)}
+a{color:var(--accent-text)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-transform:uppercase;line-height:.95;letter-spacing:.005em;text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--f-display);font-weight:700;text-transform:uppercase;letter-spacing:.18em;font-size:.8rem;margin:0 0 12px;color:var(--accent-text)}
+
+/* ---------- HERO (phone first) ---------- */
+.hero{background:var(--brand);color:var(--on-brand);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-30%;top:-20%;width:90%;aspect-ratio:1;background:radial-gradient(closest-side,rgba(255,255,255,.10),transparent 70%);pointer-events:none}
+.hero .wrap{padding-block:14px 28px;display:grid;grid-template-columns:minmax(0,1fr);gap:18px;position:relative;z-index:1}
+.topline{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:block;width:92px;height:auto}
+.proof{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:99px;background:rgba(255,255,255,.14);font-size:.8rem;font-weight:600;white-space:nowrap}
+.proof b{font-family:var(--f-display);font-size:1rem;letter-spacing:.02em}
+.hero h1{font-size:clamp(2.6rem,11vw,6.2rem);font-weight:800;margin-top:6px}
+.hero h1 span{color:var(--sky)}
+.lede{font-size:1.02rem;margin:10px 0 0;color:rgba(255,255,255,.92);max-width:40ch}
+.lede strong{color:#fff;font-weight:700}
+.hosts{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.9rem;color:rgba(255,255,255,.9)}
+.hosts .faces{display:flex}
+.hosts img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--brand)}
+.hosts img+img{margin-left:-12px}
+
+/* ---------- GIVE CARD ---------- */
+.give{background:var(--surface);color:var(--fg);border-radius:18px;padding:20px 16px 18px;box-shadow:var(--shadow);scroll-margin-top:12px}
+.give h2{font-size:1.7rem;font-weight:700}
+.give .sub{color:var(--muted);margin:2px 0 14px;font-size:.92rem}
+.tiers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;border:0;margin:0;padding:0}
+.tiers legend{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.tier{position:relative}
+.tier input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.tier label{display:flex;align-items:baseline;justify-content:center;gap:4px;min-height:58px;padding:12px 8px;border-radius:12px;background:var(--tier-bg);border:2px solid transparent;cursor:pointer;transition:background .15s,color .15s,border-color .15s;-webkit-tap-highlight-color:transparent}
+.tier .amt{font-family:var(--f-display);font-weight:700;font-size:1.75rem;line-height:1;font-variant-numeric:tabular-nums}
+.tier .per{font-size:.85rem;color:var(--muted)}
+.tier input:checked+label{background:var(--brand);color:var(--on-brand);border-color:var(--brand)}
+.tier input:checked+label .per{color:rgba(255,255,255,.85)}
+.tier input:focus-visible+label{outline:3px solid var(--focus);outline-offset:2px}
+.other{grid-column:1/-1}
+.other label{min-height:50px;align-items:center}
+.other .amt{font-family:var(--f-body);font-size:1rem;font-weight:700}
+.other-note{margin:10px 0 0;font-size:.9rem;color:var(--muted)}
+.cta{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:14px;padding:17px 18px;border-radius:14px;border:0;background:var(--navy);color:#fff;font-family:var(--f-display);font-weight:700;font-size:1.4rem;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;cursor:pointer;transition:transform .15s,filter .15s;-webkit-tap-highlight-color:transparent}
+.cta:hover{filter:brightness(1.15)}
+.cta:active{transform:scale(.98)}
+.cta svg{width:22px;height:22px;flex:none}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 12px;margin:12px 0 0;font-size:.8rem;color:var(--muted)}
+.trust span{display:inline-flex;align-items:center;gap:5px}
+.trust svg{width:13px;height:13px}
+.soon{margin:12px 0 0;padding:12px 14px;border-radius:10px;background:var(--tier-bg);font-size:.92rem}
+.founding{display:inline-flex;align-items:center;gap:6px;margin:0 0 10px;padding:5px 10px;border-radius:99px;background:var(--tier-bg);color:var(--accent-text);font-size:.8rem;font-weight:700;letter-spacing:.01em}
+.founding svg{width:13px;height:13px}
+.daily{margin:12px 0 0;text-align:center;font-size:.92rem;color:var(--muted)}
+.daily b{color:var(--fg);font-weight:700}
+.give-links{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px;margin-top:10px;font-size:.88rem}
+
+/* ---------- LETTER ---------- */
+.letter{font-size:1.04rem}
+.letter p{margin:0 0 14px;max-width:56ch}
+.letter .sig{font-family:var(--f-quote);font-style:italic;font-size:1.35rem;line-height:1.3;margin-top:20px;color:var(--accent-text)}
+
+/* ---------- PERKS ---------- */
+.perks{padding-block:8px 52px}
+.perks-card{background:var(--surface);border:2px solid var(--brand);border-radius:20px;padding:26px 20px}
+.perks h2{font-size:clamp(2rem,8vw,2.8rem);font-weight:700;margin-bottom:20px}
+.perks ul{list-style:none;margin:0 0 6px;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+.perks li{display:flex;gap:14px;align-items:flex-start;min-width:0}
+.perks .ico{flex:none;width:44px;height:44px;border-radius:12px;background:var(--tier-bg);color:var(--accent-text);display:grid;place-items:center}
+.perks .ico svg{width:22px;height:22px}
+.perks h3{font-size:1.3rem;font-weight:700;margin-bottom:4px}
+.perks li p{margin:0;color:var(--muted)}
+
+/* ---------- FAQ ---------- */
+.faq{padding-block:52px 8px}
+.faq h2{font-size:clamp(2rem,8vw,2.8rem);font-weight:700;margin-bottom:18px}
+.qs{border-top:1px solid var(--line)}
+.qs details{border-bottom:1px solid var(--line)}
+.qs summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:56px;padding:12px 0;font-weight:600;font-size:1.04rem}
+.qs summary::-webkit-details-marker{display:none}
+.qs summary::after{content:"+";flex:none;font-family:var(--f-display);font-size:1.6rem;line-height:1;color:var(--accent-text);transition:transform .2s}
+.qs details[open] summary::after{transform:rotate(45deg)}
+.qs details p{margin:0 0 16px;color:var(--muted);max-width:62ch}
+
+/* ---------- MILESTONE ---------- */
+.milestone{padding-block:44px 8px}
+.milestone .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:center}
+.big{min-width:0;font-family:var(--f-display);font-weight:800;font-size:clamp(3.4rem,15vw,5.6rem);line-height:.85;color:var(--accent-text);font-variant-numeric:tabular-nums}
+.big small{display:block;font-size:.3em;letter-spacing:.14em;color:var(--fg);margin-top:10px}
+.timeline p{margin:0;max-width:52ch}
+.track{position:relative;height:12px;border-radius:99px;background:var(--line);margin:28px 0 0}
+.track .fill{position:absolute;inset:0 auto 0 0;width:48%;border-radius:99px;background:linear-gradient(90deg,var(--brand),var(--bar-end))}
+.track .pin{position:absolute;left:48%;top:50%;width:22px;height:22px;transform:translate(-50%,-50%);border-radius:50%;background:var(--bar-end);border:4px solid var(--bg)}
+.ticks{display:grid;grid-template-columns:1fr 1fr 1fr;margin-top:12px;font-size:.82rem;color:var(--muted)}
+.ticks b{display:block;color:var(--fg);font-family:var(--f-display);text-transform:uppercase;letter-spacing:.06em;font-size:.98rem}
+.ticks div:nth-child(2){text-align:center}
+.ticks div:last-child{text-align:right}
+
+/* ---------- WHY ---------- */
+.why{padding-block:48px}
+.why .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:center}
+.photos{margin:0;order:0;min-width:0}
+.photos img{display:block;width:100%;max-width:440px;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:18px;margin-inline:auto}
+.photos figcaption{margin-top:12px;text-align:center;font-family:var(--f-display);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:1.1rem}
+.photos figcaption span{display:block;font-family:var(--f-body);font-weight:400;text-transform:none;letter-spacing:0;font-size:.88rem;color:var(--muted);margin-top:2px}
+.why h2{font-size:clamp(2.3rem,9vw,3.4rem);font-weight:700;margin-bottom:16px}
+.why p{margin:0 0 14px;max-width:56ch}
+.pull{font-family:var(--f-quote);font-style:italic;font-size:clamp(1.55rem,6vw,2.2rem);line-height:1.2;margin:24px 0 6px;color:var(--fg);text-wrap:balance}
+.pull::before{content:"\201C";color:var(--brand)}
+.pull::after{content:"\201D";color:var(--brand)}
+.cite{font-size:.88rem;color:var(--muted);margin:0}
+.inline-give{display:inline-flex;margin-top:22px;width:auto;padding:14px 22px;font-size:1.15rem}
+
+/* ---------- GOES TO ---------- */
+.goes{padding-block:8px 48px}
+.goes h2{font-size:clamp(1.9rem,7vw,2.6rem);font-weight:700;margin-bottom:20px}
+.goes ul{list-style:none;margin:0;padding:22px 0 0;display:grid;grid-template-columns:minmax(0,1fr);gap:20px;border-top:2px solid var(--fg)}
+.goes li{min-width:0}
+.goes h3{font-size:1.4rem;font-weight:700;margin-bottom:6px;color:var(--accent-text)}
+.goes li p{margin:0;color:var(--muted)}
+
+/* ---------- BELIEVE ---------- */
+.believe{background:var(--brand);color:var(--on-brand)}
+.believe .wrap{padding-block:56px}
+.believe .eyebrow{color:var(--sky)}
+.believe blockquote{margin:14px 0 0;font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:clamp(2.7rem,12vw,5.6rem);line-height:.92;text-wrap:balance}
+.verses{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;margin-top:36px;border-top:1px solid rgba(255,255,255,.3);padding-top:24px}
+.verses p{margin:0;font-family:var(--f-quote);font-style:italic;font-size:1.25rem;line-height:1.35}
+.verses span{display:block;margin-top:8px;font-family:var(--f-body);font-style:normal;font-size:.86rem;color:rgba(255,255,255,.8)}
+
+/* ---------- NOT READY ---------- */
+.notready{padding-block:52px}
+.notready .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:start}
+.notready h2{font-size:clamp(2.1rem,8vw,3rem);font-weight:700;margin-bottom:10px}
+.notready p{margin:0 0 14px;max-width:50ch}
+.links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.links a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:52px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:var(--fg);font-weight:600;background:var(--surface);transition:border-color .15s;min-width:0}
+.links a:hover{border-color:var(--brand)}
+.links a span{color:var(--muted);font-weight:400;font-size:.88rem}
+.share{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px}
+.btn2{min-height:48px;padding:12px 18px;border-radius:12px;border:2px solid var(--brand);background:transparent;color:var(--accent-text);font:600 1rem var(--f-body);cursor:pointer}
+.btn2:hover{background:var(--tier-bg)}
+.share output{font-size:.9rem;color:var(--muted);word-break:break-all}
+
+/* ---------- CLOSING ---------- */
+.closing{border-top:1px solid var(--line)}
+.closing .wrap{padding-block:48px;text-align:center}
+.closing h2{font-size:clamp(2.1rem,8vw,3.2rem);font-weight:800;margin-bottom:20px}
+.closing .cta{max-width:520px;margin-inline:auto}
+footer{background:var(--surface);border-top:1px solid var(--line)}
+footer .wrap{padding-block:28px calc(96px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:minmax(0,1fr);gap:18px;font-size:.86rem;color:var(--muted)}
+footer .mark{background:var(--brand);border-radius:10px;padding:10px 12px;justify-self:start}
+footer .mark img{display:block;width:90px;height:auto}
+footer p{margin:0 0 8px;max-width:70ch}
+
+/* ---------- STICKY GIVE BAR (phones) ---------- */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));box-shadow:0 -10px 30px -18px rgba(0,0,0,.4);transform:translateY(110%);transition:transform .25s ease;display:flex;gap:10px;align-items:center}
+.bar.show{transform:none}
+.bar .cta{margin:0;padding:14px;font-size:1.2rem;flex:1}
+.bar .change{flex:none;min-height:50px;padding:0 14px;border-radius:12px;border:2px solid var(--line);background:transparent;color:var(--fg);font:600 .92rem var(--f-body);text-decoration:none;display:flex;align-items:center}
+
+/* ---------- WIDER SCREENS ---------- */
+@media (min-width:700px){
+  body{font-size:17px}
+  .hero .wrap{padding-block:26px 56px;gap:24px}
+  .logo{width:140px}
+  .lede{font-size:1.15rem;margin-top:18px}
+  .give{padding:26px 24px}
+  .tiers{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .tier label{flex-direction:column;align-items:center;min-height:76px;gap:2px}
+  .other label{flex-direction:row;min-height:52px}
+  .goes ul{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+  .perks-card{padding:36px}
+  .perks ul{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-bottom:12px}
+  .perks li{flex-direction:column}
+  .perks-card .cta{max-width:420px}
+  .verses{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+  footer .wrap{grid-template-columns:auto minmax(0,1fr);gap:28px;padding-block:32px 40px}
+  .bar{display:none}
+}
+@media (min-width:960px){
+  .hero .wrap{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:start}
+  .topline{grid-column:1/-1}
+  .give{margin-top:4px}
+  .milestone{padding-block:64px 24px}
+  .milestone .wrap{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px}
+  .why .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
+  .photos{order:0}
+  .notready .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topline">
+      <img class="logo" src="img/logo-white.png" alt="The Miracle Project" width="670" height="314">
+      <span class="proof"><b>1,000,000</b> views in 58 days</span>
+    </div>
+    <div>
+      <h1>Be part of <span>the miracle.</span></h1>
+      <p class="lede">We don't get paid to make this podcast. <strong>We actually pay to do it.</strong> Join our monthly supporters and help us reach the next million people with Christ's light.</p>
+      <div class="hosts">
+        <div class="faces"><img src="img/coleton-face.jpg" alt="" width="40" height="40"><img src="img/gabby-face.jpg" alt="" width="40" height="40"></div>
+        <span>From Coleton &amp; Gabby, your hosts</span>
+      </div>
+    </div>
+
+    <section class="give" id="give" aria-labelledby="give-title">
+      <p class="founding"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg>Join our first 100 founding supporters</p>
+      <h2 id="give-title">Give monthly</h2>
+      <p class="sub">Pick an amount. Takes about a minute, no account needed.</p>
+      <form id="give-form">
+        <fieldset class="tiers">
+          <legend>Monthly amount</legend>
+          <div class="tier"><input type="radio" name="amt" id="amt-5" value="5"><label for="amt-5"><span class="amt">$5</span><span class="per">/mo</span></label></div>
+          <div class="tier"><input type="radio" name="amt" id="amt-10" value="10" checked><label for="amt-10"><span class="amt">$10</span><span class="per">/mo</span></label></div>
+          <div class="tier"><input type="radio" name="amt" id="amt-25" value="25"><label for="amt-25"><span class="amt">$25</span><span class="per">/mo</span></label></div>
+          <div class="tier"><input type="radio" name="amt" id="amt-50" value="50"><label for="amt-50"><span class="amt">$50</span><span class="per">/mo</span></label></div>
+          <div class="tier other"><input type="radio" name="amt" id="amt-other" value="other"><label for="amt-other"><span class="amt">Other amount</span></label></div>
+        </fieldset>
+        <p class="other-note" id="other-note" hidden>You'll choose any whole-dollar amount per month on the next screen.</p>
+        <p class="daily" id="daily" aria-live="polite">That's about <b>33¢ a day</b>, or $120 a year.</p>
+        <a class="cta" id="cta" href="#give">
+          <span id="cta-label">Give $10/month</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <p class="soon" id="soon" hidden role="status">Monthly giving opens in the next few days. Follow <a href="https://www.instagram.com/themiracleprojectpod" target="_blank" rel="noopener">@themiracleprojectpod</a> and we'll post the moment it's live.</p>
+      </form>
+      <p class="trust">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Secure checkout by Stripe</span>
+        <span>Apple Pay &amp; Google Pay</span>
+        <span>Cancel anytime</span>
+      </p>
+      <div class="give-links">
+        <a href="#give" id="once-link">Prefer to give once?</a>
+        <a href="#not-ready">Can't give right now?</a>
+      </div>
+    </section>
+  </div>
+</header>
+
+<main>
+  <section class="milestone" aria-labelledby="ms-title">
+    <div class="wrap">
+      <div class="big" id="ms-title">1,000,000<small>views in 58 days</small></div>
+      <div class="timeline">
+        <p>When we started, we prayed about a goal: reach a million people between September 1 and December 31. It felt big and a little audacious. We passed one million views on October 29, before we were even halfway there.</p>
+        <div class="track" role="img" aria-label="One million views reached on October 29, 58 of the 121 days in the goal window."><div class="fill"></div><div class="pin"></div></div>
+        <div class="ticks">
+          <div><b>Sep 1</b>First post</div>
+          <div><b>Oct 29</b>1 million views</div>
+          <div><b>Dec 31</b>Original goal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" aria-labelledby="why-title">
+    <div class="wrap">
+      <figure class="photos"><img src="img/duo.jpg" alt="Gabby and Coleton, hosts of The Miracle Project" width="880" height="1100" loading="lazy"><figcaption>Gabby &amp; Coleton<span>Your hosts</span></figcaption></figure>
+      <div>
+        <p class="eyebrow">A note from us</p>
+        <h2 id="why-title">We feel called to this.</h2>
+        <div class="letter">
+          <p>Dear friend,</p>
+          <p>Whether this is your first time tuning in or you've been here since the beginning, we're so grateful you're here.</p>
+          <p>We started The Miracle Project with one belief: what we look for, we find. God loves us, and He is a God of miracles. We sit down with people who have seen His hand in the details of their lives, and we share it with anyone who will listen. While we're asleep, someone on the other side of the world can be touched by something a guest shared months ago.</p>
+          <p>We're both full-time students who also work. Some weeks Coleton has put more than 40 hours into the podcast, and Gabby has poured in just as much heart. We're so happy to do it. But we don't get paid, we actually pay to do it, and we want it to last so we can bless more people for years, not months.</p>
+          <p>If you're in a position to give, even a little each month, you'd be helping someone else find their miracle. And if all you can do right now is listen and share, we love that too.</p>
+          <p class="sig">With love,<br>Coleton &amp; Gabby</p>
+        </div>
+        <a class="cta inline-give" href="#give">Give monthly</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="goes" aria-labelledby="goes-title">
+    <div class="wrap">
+      <h2 id="goes-title">What your monthly gift does</h2>
+      <ul>
+        <li><h3>Keeps us recording</h3><p>Studio time and gear, so every guest's story sounds and looks the way it deserves.</p></li>
+        <li><h3>Gets every episode out</h3><p>Editing the full episodes and the short clips that first introduced most of you to the show.</p></li>
+        <li><h3>Carries it further</h3><p>More guests, more episodes, and more people who need to hear that God knows them.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="perks" aria-labelledby="perks-title">
+    <div class="wrap">
+      <div class="perks-card">
+        <p class="eyebrow">As a founding supporter</p>
+        <h2 id="perks-title">You're part of the team now.</h2>
+        <ul>
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><h3>A personal thank-you</h3><p>We'll message you ourselves to say thank you. No form letter.</p></div></li>
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M22 8l-6 4 6 4z"/></svg></span><div><h3>Behind-the-scenes updates</h3><p>A short monthly note on upcoming guests, what your support made possible, and what's next.</p></div></li>
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span><div><h3>You're in our prayers</h3><p>We pray for our supporters. Send us anything you'd like us to pray about.</p></div></li>
+        </ul>
+        <a class="cta" href="#give">Join the founding 100</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="believe" aria-labelledby="believe-title">
+    <div class="wrap">
+      <p class="eyebrow" id="believe-title">What we believe</p>
+      <blockquote>What we look for, we find.</blockquote>
+      <div class="verses">
+        <p>"From a small corner of the room to all four corners of the world."<span>Gabby, on the reach this podcast can have</span></p>
+        <p>"You are a beloved son or daughter of God. Your worth is infinite."<span>Coleton's testimony</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <h2 id="faq-title">Questions before you give</h2>
+      <div class="qs">
+        <details><summary>Can I change or cancel my gift?</summary><p>Yes, anytime. Use the link in your receipt email, or message us on Instagram and we'll take care of it. No questions asked.</p></details>
+        <details><summary>Where does my money go?</summary><p>Into making the podcast: studio time, equipment, editing, and getting episodes and clips in front of more people. Supporters get a monthly update on what their gifts made possible.</p></details>
+        <details><summary>Is my gift tax-deductible?</summary><p>No. The Miracle Project is a podcast, not a registered nonprofit (yet), so gifts aren't tax-deductible.</p></details>
+        <details><summary>Is checkout secure?</summary><p>Yes. Payments are handled by Stripe, the same processor used by millions of businesses. We never see your card number. Apple Pay and Google Pay work too.</p></details>
+        <details><summary>Can I give one time instead?</summary><p>Of course. <a href="#give" class="once-inline">Give a one-time gift</a> in any amount.</p></details>
+        <details><summary>Do I need to make an account?</summary><p>No. Just your email and payment details at checkout. It takes about a minute.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="notready" id="not-ready" aria-labelledby="nr-title">
+    <div class="wrap">
+      <div>
+        <h2 id="nr-title">Not ready to give? We love you here too.</h2>
+        <p class="pull" style="margin-top:6px">You just watching is genuinely a miracle to us.</p>
+        <p class="cite" style="margin-bottom:20px">Gabby</p>
+        <p>Listening and sharing helps more than you know. Send an episode to someone you love. And if you have a story of God's hand in your life, message us. We'd love to have you as a guest.</p>
+        <div class="share">
+          <button class="btn2" type="button" id="copy">Share this page</button>
+          <output id="copy-msg" aria-live="polite"></output>
+        </div>
+      </div>
+      <nav class="links" aria-label="Listen and follow">
+        <a href="https://www.youtube.com/@themiracleprojectpod" target="_blank" rel="noopener">YouTube <span>Watch</span></a>
+        <a href="https://podcasts.apple.com/us/podcast/the-miracle-project/id6807585353" target="_blank" rel="noopener">Apple Podcasts <span>Listen</span></a>
+        <a href="https://music.amazon.com/podcasts/ffa97762-816c-43e0-ad73-7de6f8b9c9ce/the-miracle-project" target="_blank" rel="noopener">Amazon Music <span>Listen</span></a>
+        <a href="https://www.instagram.com/themiracleprojectpod" target="_blank" rel="noopener">Instagram <span>Follow</span></a>
+        <a href="https://www.tiktok.com/@themiracleprojectpod" target="_blank" rel="noopener">TikTok <span>Follow</span></a>
+        <a href="https://linktr.ee/themiracleprojectpod" target="_blank" rel="noopener">All links <span>Linktree</span></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="closing" aria-labelledby="close-title">
+    <div class="wrap">
+      <h2 id="close-title">This is just the beginning.</h2>
+      <a class="cta" href="#give">Become a supporter</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="mark"><img src="img/logo-white.png" alt="The Miracle Project" width="670" height="314"></div>
+    <div>
+      <p>The Miracle Project is a podcast hosted by Coleton Clark and Gabby Adams. We are not a registered nonprofit, so gifts are not tax-deductible.</p>
+      <p>Monthly gifts renew automatically each month until you cancel. You can cancel anytime from the link in your receipt email or by messaging us on Instagram.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="bar" id="bar" aria-hidden="true">
+  <a class="change" href="#give" tabindex="-1">Change</a>
+  <a class="cta" id="bar-cta" href="#give" tabindex="-1"><span id="bar-label">Give $10/month</span></a>
+</div>
+
+<script>
+/* ===== Paste your Stripe Payment Links here (one recurring link per amount). =====
+   "other" = a $1/month price with "Let customers adjust quantity" turned on. */
+const GIVE_LINKS = {
+  5:     "",
+  10:    "",
+  25:    "",
+  50:    "",
+  other: "",
+  once:  ""   /* one-time gift link ("Customers choose what to pay") */
+};
+
+(function(){
+  const form=document.getElementById('give-form');
+  const ctas=[document.getElementById('cta'),document.getElementById('bar-cta')];
+  const labels=[document.getElementById('cta-label'),document.getElementById('bar-label')];
+  const note=document.getElementById('other-note');
+  const soon=document.getElementById('soon');
+  const giveCard=document.getElementById('give');
+  const daily=document.getElementById('daily');
+
+  // One-time gift links
+  document.querySelectorAll('#once-link,.once-inline').forEach(a=>{
+    if(GIVE_LINKS.once){a.href=GIVE_LINKS.once;}
+    else{a.removeAttribute('target');a.addEventListener('click',e=>{e.preventDefault();soon.hidden=false;giveCard.scrollIntoView({block:'center'});});}
+  });
+
+  function current(){const r=form.querySelector('input[name=amt]:checked');return r?r.value:'10'}
+  function update(){
+    const v=current();
+    const text = v==='other' ? 'Choose my amount' : 'Give $'+v+'/month';
+    labels.forEach(l=>l.textContent=text);
+    note.hidden = v!=='other';
+    if(v==='other'){daily.textContent='Every dollar a month helps. Thank you.';}
+    else{const n=+v, d=n*12/365;
+      const dayTxt = d<1 ? Math.round(d*100)+'¢' : '$'+d.toFixed(2);
+      daily.innerHTML='That\'s about <b>'+dayTxt+' a day</b>, or $'+(n*12).toLocaleString()+' a year.';}
+    const link=GIVE_LINKS[v];
+    ctas.forEach(a=>{ if(link){a.href=link;} else {a.href='#give';a.removeAttribute('target');} });
+    soon.hidden=true;
+  }
+  form.addEventListener('change',update);
+  ctas.forEach(a=>a.addEventListener('click',e=>{
+    if(!GIVE_LINKS[current()]){e.preventDefault();soon.hidden=false;giveCard.scrollIntoView({block:'center'});}
+  }));
+
+  // Deep links: #give-5, #give-10, #give-25, #give-50, #give-other preselect an amount.
+  function fromHash(){
+    const m=(location.hash||'').match(/^#give-(5|10|25|50|other)$/);
+    if(m){const r=document.getElementById('amt-'+m[1]); if(r){r.checked=true;update();}
+      giveCard.scrollIntoView({block:'center'});}
+  }
+  window.addEventListener('hashchange',fromHash);
+  update();fromHash();
+
+  // Copy link
+  const copyBtn=document.getElementById('copy'),msg=document.getElementById('copy-msg');
+  copyBtn.addEventListener('click',()=>{
+    const url=location.href.split('#')[0];
+    if(navigator.share){navigator.share({title:'The Miracle Project',text:'Be part of the miracle with me.',url:url}).catch(()=>{});return;}
+    const done=()=>{msg.textContent='Link copied. Thanks for sharing!'};
+    try{navigator.clipboard.writeText(url).then(done,()=>{msg.textContent=url});}
+    catch(e){msg.textContent=url}
+  });
+
+  // Sticky give bar on phones once the give card is off screen (hidden again near the closing button)
+  const bar=document.getElementById('bar'),closing=document.querySelector('.closing');
+  if('IntersectionObserver' in window){
+    let giveVis=true,closeVis=false;
+    const set=()=>{const on=!giveVis&&!closeVis;bar.classList.toggle('show',on);bar.setAttribute('aria-hidden',on?'false':'true');bar.querySelectorAll('a').forEach(a=>a.tabIndex=on?0:-1);};
+    new IntersectionObserver(es=>{es.forEach(e=>giveVis=e.isIntersecting);set();}).observe(giveCard);
+    new IntersectionObserver(es=>{es.forEach(e=>closeVis=e.isIntersecting);set();}).observe(closing);
+  }
+})();
+</script>
+
+</body>
+</html>
