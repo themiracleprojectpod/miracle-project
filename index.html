@@ -107,9 +107,10 @@ h1,h2,h3{font-family:var(--f-display);text-transform:uppercase;line-height:.95;l
 .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 12px;margin:12px 0 0;font-size:.8rem;color:var(--muted)}
 .trust span{display:inline-flex;align-items:center;gap:5px}
 .trust svg{width:13px;height:13px}
-.soon{margin:12px 0 0;padding:12px 14px;border-radius:10px;background:var(--tier-bg);font-size:.92rem}
 .founding{display:inline-flex;align-items:center;gap:6px;margin:0 0 10px;padding:5px 10px;border-radius:99px;background:var(--tier-bg);color:var(--accent-text);font-size:.8rem;font-weight:700;letter-spacing:.01em}
-.founding svg{width:13px;height:13px}
+.founding svg{width:13px;height:13px;flex:none}
+.fprogress{margin:14px 0 0;color:var(--muted);font-size:.98rem}
+.fprogress b{color:var(--fg)}
 .daily{margin:12px 0 0;text-align:center;font-size:.92rem;color:var(--muted)}
 .daily b{color:var(--fg);font-weight:700}
 .give-links{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px;margin-top:10px;font-size:.88rem}
@@ -146,6 +147,7 @@ h1,h2,h3{font-family:var(--f-display);text-transform:uppercase;line-height:.95;l
 .milestone .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:center}
 .big{min-width:0;font-family:var(--f-display);font-weight:800;font-size:clamp(3.4rem,15vw,5.6rem);line-height:.85;color:var(--accent-text);font-variant-numeric:tabular-nums}
 .big small{display:block;font-size:.3em;letter-spacing:.14em;color:var(--fg);margin-top:10px}
+.timeline p.next{margin-top:12px;font-weight:600}
 .timeline p{margin:0;max-width:52ch}
 .track{position:relative;height:12px;border-radius:99px;background:var(--line);margin:28px 0 0}
 .track .fill{position:absolute;inset:0 auto 0 0;width:48%;border-radius:99px;background:linear-gradient(90deg,var(--brand),var(--bar-end))}
@@ -172,6 +174,7 @@ h1,h2,h3{font-family:var(--f-display);text-transform:uppercase;line-height:.95;l
 
 /* ---------- GOES TO ---------- */
 .goes{padding-block:8px 48px}
+.goes-intro{margin:-8px 0 22px;max-width:60ch}
 .goes h2{font-size:clamp(1.9rem,7vw,2.6rem);font-weight:700;margin-bottom:20px}
 .goes ul{list-style:none;margin:0;padding:22px 0 0;display:grid;grid-template-columns:minmax(0,1fr);gap:20px;border-top:2px solid var(--fg)}
 .goes li{min-width:0}
@@ -299,7 +302,7 @@ footer .mark{align-self:start}
     </div>
     <div>
       <h1>Be part of <span>the miracle.</span></h1>
-      <p class="lede">We don't get paid to make this podcast. <strong>We actually pay to do it.</strong> Help us reach the next million people with Christ's light.</p>
+      <p class="lede">The next story we share could be exactly what someone needs to hear. <strong>Help them recognize God's hand in their life.</strong></p>
       <div class="hosts">
         <div class="faces"><img src="img/coleton-face.jpg" alt="" width="40" height="40"><img src="img/gabby-face.jpg" alt="" width="40" height="40"></div>
         <span>From Coleton &amp; Gabby, your hosts</span>
@@ -307,7 +310,7 @@ footer .mark{align-self:start}
     </div>
 
     <section class="give" id="give" aria-labelledby="give-title">
-      <p class="founding"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg>Join our first 100 founding supporters</p>
+      <p class="founding"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><span>Founding 100: <b>2</b> joined. Be one of the first.</span></p>
       <h2 id="give-title">Give monthly</h2>
       <p class="sub">Takes about a minute. No account needed.</p>
       <form id="give-form">
@@ -325,7 +328,6 @@ footer .mark{align-self:start}
           <span id="cta-label">Give $10/month</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <p class="soon" id="soon" hidden role="status">Monthly giving opens in the next few days. Follow <a href="https://www.instagram.com/themiracleprojectpod" target="_blank" rel="noopener">@themiracleprojectpod</a> and we'll post the moment it's live.</p>
       </form>
       <p class="trust">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Secure checkout by Stripe</span>
@@ -345,6 +347,7 @@ footer .mark{align-self:start}
       <div class="big" id="ms-title">1,000,000<small>views in 58 days</small></div>
       <div class="timeline">
         <p>When we started, we prayed about a goal: reach a million people between September 1 and December 31. It felt big and a little audacious. We passed one million views on October 29, before we were even halfway there.</p>
+        <p class="next">Now we're working toward the next million, and we're inviting our first 100 founding supporters to help us get there.</p>
         <div class="track" role="img" aria-label="One million views reached on October 29, 58 of the 121 days in the goal window."><div class="fill"></div><div class="pin"></div></div>
         <div class="ticks">
           <div><b>Sep 1</b>First post</div>
@@ -377,10 +380,11 @@ footer .mark{align-self:start}
   <section class="goes" aria-labelledby="goes-title">
     <div class="wrap">
       <h2 id="goes-title">What your monthly gift does</h2>
+      <p class="goes-intro">A one-time gift helps with one episode. A monthly gift lets us plan the next ones: book the studio, invite the next guest and keep publishing without wondering how we'll pay for it.</p>
       <ul>
-        <li><h3>Keeps us recording</h3><p>Studio time and gear, so every guest's story sounds and looks the way it deserves.</p></li>
+        <li><h3>Keeps the stories coming</h3><p>Studio time and gear, so we can keep recording new stories consistently, not only when we can afford to.</p></li>
         <li><h3>Gets every episode out</h3><p>Editing the full episodes and the short clips that first introduced most of you to the show.</p></li>
-        <li><h3>Carries it further</h3><p>More guests, more episodes, and more people who need to hear that God knows them.</p></li>
+        <li><h3>Reaches someone new</h3><p>Every episode and clip is another chance for someone, maybe thousands of miles away, to hear that God knows them personally.</p></li>
       </ul>
     </div>
   </section>
@@ -395,6 +399,7 @@ footer .mark{align-self:start}
           <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M22 8l-6 4 6 4z"/></svg></span><div><h3>Behind-the-scenes updates</h3><p>A short monthly note on upcoming guests, what your support made possible, and what's next.</p></div></li>
           <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span><div><h3>You're in our prayers</h3><p>We pray for our supporters. Send us anything you'd like us to pray about.</p></div></li>
         </ul>
+        <p class="fprogress"><b>2</b> founding supporters so far. 98 spots left.</p>
         <a class="cta" href="#give">Join the founding 100</a>
       </div>
     </div>
@@ -490,7 +495,6 @@ const GIVE_LINKS = {
   const ctas=[document.getElementById('cta'),document.getElementById('bar-cta')];
   const labels=[document.getElementById('cta-label'),document.getElementById('bar-label')];
   const note=document.getElementById('other-note');
-  const soon=document.getElementById('soon');
   const giveCard=document.getElementById('give');
   const daily=document.getElementById('daily');
 
@@ -519,7 +523,7 @@ const GIVE_LINKS = {
   // One-time gift links
   document.querySelectorAll('#once-link,.once-inline').forEach(a=>{
     if(GIVE_LINKS.once){a.href=TRACK(GIVE_LINKS.once);}
-    else{a.removeAttribute('target');a.addEventListener('click',e=>{e.preventDefault();soon.hidden=false;giveCard.scrollIntoView({block:'center'});});}
+    else{a.removeAttribute('target');a.addEventListener('click',e=>{e.preventDefault();giveCard.scrollIntoView({block:'center'});});}
   });
 
   function current(){const r=form.querySelector('input[name=amt]:checked');return r?r.value:'10'}
@@ -534,11 +538,10 @@ const GIVE_LINKS = {
       daily.innerHTML='That\'s about <b>'+dayTxt+' a day</b>.';}
     const link=TRACK(GIVE_LINKS[v]);
     ctas.forEach(a=>{ if(link){a.href=link;} else {a.href='#give';a.removeAttribute('target');} });
-    soon.hidden=true;
   }
   form.addEventListener('change',update);
   ctas.forEach(a=>a.addEventListener('click',e=>{
-    if(!GIVE_LINKS[current()]){e.preventDefault();soon.hidden=false;giveCard.scrollIntoView({block:'center'});}
+    if(!GIVE_LINKS[current()]){e.preventDefault();giveCard.scrollIntoView({block:'center'});}
   }));
 
   // Deep links: #give-5, #give-10, #give-25, #give-50, #give-other preselect an amount.
