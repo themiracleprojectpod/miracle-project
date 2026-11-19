@@ -182,6 +182,16 @@ h1,h2,h3{font-family:var(--f-display);text-transform:uppercase;line-height:.95;l
 .inline-give{display:inline-flex;margin-top:22px;width:auto;padding:14px 22px;font-size:1.15rem}
 
 /* ---------- GOES TO ---------- */
+.honest{padding-block:44px 8px}
+.honest-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px 20px}
+.honest h2{font-size:clamp(2rem,8vw,2.8rem);font-weight:700;margin-bottom:12px}
+.honest-intro{margin:0 0 20px;max-width:60ch}
+.honest ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.honest li{min-width:0;padding-left:16px;border-left:3px solid var(--brand)}
+.honest h3{font-size:1.3rem;font-weight:700;margin-bottom:4px}
+.honest li p{margin:0;color:var(--muted)}
+.honest-see{margin:22px 0 0;font-size:.95rem}
+@media (min-width:760px){.honest ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 32px}.honest-card{padding:34px 36px}}
 .goes{padding-block:8px 48px}
 .goes-intro{margin:-8px 0 22px;max-width:60ch}
 .goes h2{font-size:clamp(1.9rem,7vw,2.6rem);font-weight:700;margin-bottom:20px}
@@ -314,7 +324,7 @@ footer .mark{align-self:start}
       <p class="lede">The next story we share could be exactly what someone needs to hear. <strong>Help them recognize God's hand in their life.</strong></p>
       <div class="hosts">
         <div class="faces"><img src="img/coleton-face.jpg" alt="" width="40" height="40"><img src="img/gabby-face.jpg" alt="" width="40" height="40"></div>
-        <span>From Coleton &amp; Gabby, your hosts</span>
+        <span>From Coleton Clark &amp; Gabby Adams, your hosts</span>
       </div>
     </div>
 
@@ -342,6 +352,8 @@ footer .mark{align-self:start}
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Secure checkout by Stripe</span>
         <span>Apple Pay &amp; Cash App</span>
         <span>Cancel anytime</span>
+</p>
+<p class="trust" style="margin-top:6px"><span>We don't pay ourselves. Gifts go to making episodes.</span>
       </p>
       <div class="give-links">
         <a href="#give" id="once-link">Prefer to give once?</a>
@@ -351,6 +363,23 @@ footer .mark{align-self:start}
 </header>
 
 <main>
+<section class="honest" aria-labelledby="honest-title">
+<div class="wrap">
+<div class="honest-card">
+<p class="eyebrow">An honest word about money</p>
+<h2 id="honest-title">Why we're asking, and where it goes.</h2>
+<p class="honest-intro">We know a podcast asking for money online can feel like a red flag. So here it is, plainly.</p>
+<ul>
+<li><h3>Everything we make is free</h3><p>Every episode and clip is free to watch and listen to, and it always will be. Giving is never required.</p></li>
+<li><h3>We don't pay ourselves</h3><p>Neither of us takes a salary. So far, most of the costs have come out of our own pockets.</p></li>
+<li><h3>The hours are ours to give</h3><p>We're two full-time students who also work. Recording, editing and posting take many hours every week, and we're glad to give them.</p></li>
+<li><h3>Gifts pay real production costs</h3><p>Studio time, cameras and audio gear, editing, hosting, and getting clips in front of people who need them.</p></li>
+<li><h3>We'll always be upfront</h3><p>We're a podcast, not a registered nonprofit (yet), so gifts aren't tax-deductible.</p></li>
+</ul>
+<p class="honest-see">Want to see who we are first? <a href="https://www.youtube.com/@themiracleprojectpod" target="_blank" rel="noopener">Watch a full episode on YouTube</a>.</p>
+</div>
+</div>
+</section>
   <section class="milestone" aria-labelledby="ms-title">
     <div class="wrap">
       <div class="big" id="ms-title">1,000,000<small>views in 58 days</small></div>
@@ -377,7 +406,8 @@ footer .mark{align-self:start}
           <p>Dear friend,</p>
           <p>Whether this is your first time tuning in or you've been here since the beginning, we're so grateful you're here.</p>
           <p>We started The Miracle Project with one belief: what we look for, we find. God loves us, and He is a God of miracles. We sit down with people who have seen His hand in the details of their lives, and we share it with anyone who will listen. While we're asleep, someone on the other side of the world can be touched by something a guest shared months ago.</p>
-          <p>We're two friends, both full-time students who also work. Some weeks Coleton has put more than 40 hours into the podcast, and Gabby has poured in just as much heart. We're so happy to do it. But we don't get paid, we actually pay to do it, and we want it to last so we can bless more people for years, not months.</p>
+          <p>We're two friends, both full-time students who also work. We didn't start this to make money. Some weeks Coleton has put more than 40 hours into the podcast, and Gabby has poured in just as much heart. We've given our own time, our own money and a lot of late nights, and we're so happy to do it.</p>
+<p>But the honest reality is that producing episodes like these costs money. We don't get paid; we actually pay to do it. We want to keep it going and get more of these stories out to the world, for years, not months.</p>
           <p>If you're in a position to give, even a little each month, you'd be helping someone else find their miracle. And if all you can do right now is listen and share, we love that too.</p>
           <p class="sig">With gratitude,<br>Coleton &amp; Gabby</p>
         </div>
@@ -405,10 +435,9 @@ footer .mark{align-self:start}
         <h2 id="perks-title">You're part of the team now.</h2>
         <ul>
           <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><h3>A personal thank-you</h3><p>We'll message you ourselves to say thank you. No form letter.</p></div></li>
-          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M22 8l-6 4 6 4z"/></svg></span><div><h3>Behind-the-scenes updates</h3><p>A short monthly note on upcoming guests, what your support made possible, and what's next.</p></div></li>
-          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span><div><h3>You're in our prayers</h3><p>We pray for our supporters. Send us anything you'd like us to pray about.</p></div></li>
+                    <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span><div><h3>You're in our prayers</h3><p>We pray for our supporters. Send us anything you'd like us to pray about.</p></div></li>
         </ul>
-        <div class="f100 big"><p><b>The Founding 100</b><span><b>2</b> of 100 joined</span></p><div class="fbar" role="img" aria-label="2 of 100 founding supporters have joined"><i style="width:2%"></i></div><p class="fnote">Be one of the first. 98 spots left.</p></div>
+        <div class="f100 big"><p><b>The Founding 100</b><span><b>2</b> of 100 joined</span></p><div class="fbar" role="img" aria-label="2 of 100 founding supporters have joined"><i style="width:2%"></i></div><p class="fnote">Be one of the first. 98 to go.</p></div>
         <a class="cta" href="#give">Join the founding 100</a>
       </div>
     </div>
@@ -430,7 +459,9 @@ footer .mark{align-self:start}
       <h2 id="faq-title">Questions before you give</h2>
       <div class="qs">
         <details><summary>Can I change or cancel my gift?</summary><p>Yes, anytime. Go to <a href="https://billing.stripe.com/p/login/4gMdR86aB4S92TP1T0eAg00" target="_blank" rel="noopener">Manage my gift</a>, enter the email you used, and Stripe will send you a link to change your amount, update your card or cancel. Or message us on Instagram and we'll take care of it. No questions asked.</p></details>
-        <details><summary>Where does my money go?</summary><p>Into making the podcast: studio time, equipment, editing, and getting episodes and clips in front of more people. Supporters get a monthly update on what their gifts made possible.</p></details>
+        <details><summary>Where does my money go?</summary><p>Into making the podcast: studio time, equipment, editing, hosting, and getting episodes and clips in front of more people.</p></details>
+<details><summary>Do you pay yourselves?</summary><p>No. Neither of us takes a salary from the podcast. We give our time because we believe in what these stories do for people.</p></details>
+<details><summary>If the podcast is free, why ask for money?</summary><p>Because making it isn't free. Every episode takes studio time, gear and hours of editing, and so far we've covered most of that ourselves. Monthly supporters let us keep publishing consistently. Listening and sharing will always be enough, and every episode stays free either way.</p></details>
         <details><summary>Is my gift tax-deductible?</summary><p>No. The Miracle Project is a podcast, not a registered nonprofit (yet), so gifts aren't tax-deductible.</p></details>
         <details><summary>Is checkout secure?</summary><p>Yes. Payments are handled by Stripe, the same processor used by millions of businesses. We never see your card number. Apple Pay and Cash App work too.</p></details>
         <details><summary>Can I give one time instead?</summary><p>Of course. <a href="#give" class="once-inline">Give a one-time gift</a> in any amount.</p></details>
